@@ -106,7 +106,7 @@ q2CalcBtn.onclick = function () {
 // Input:   - Cho 1 USD = 23.500 VND
 //          - Nhập số tiền USD cần đổi sang VND
 // Process: 1. Tạo ra hằng vnd_per_usd gán giá trị 23500
-//          2. Tạo biến usd gán giá trị được nhập vào
+//          2. Tạo biến usd nhận giá trị được nhập vào
 //             từ người dùng
 //          3. Tạo biến vnd gán giá trị là kết quả của
 //             phép tính usd * vnd_per_usd
@@ -114,10 +114,27 @@ q2CalcBtn.onclick = function () {
 //             ra modal
 // Output: tiền vnd sau khi đổi từ usd
 const vnd_per_usd = 23500;
-var usd = 100,
-  vnd = usd * vnd_per_usd;
+const vnd_per_usd_text = document.getElementById("vnd-per-usd__text");
 
-console.log(`Answer 3: ${usd} USD = ${currencyFormat.format(vnd)} VND`);
+vnd_per_usd_text.innerHTML = `${currencyFormat.format(vnd_per_usd)}`;
+
+const usd = document.getElementById("usd"),
+  q3CalcBtn = document.getElementById("btn-q3-calc"),
+  q3FormulaBtn = document.getElementById("btn-q3-formula");
+
+q3FormulaBtn.onclick = function () {
+  modal[2].style.display = "block";
+  modalText[2].innerHTML = `vnd = usd * vnd_per_usd`;
+};
+
+q3CalcBtn.onclick = function () {
+  modal[2].style.display = "block";
+
+  const vnd = usd.value * vnd_per_usd;
+  modalText[2].innerHTML = `<strong>Answer 3:</strong><br> ${
+    usd.value
+  } USD = ${currencyFormat.format(vnd)} VND`;
+};
 
 /**
  * 🎃 Bài 4: Tính diện tích, chu vi hình chữ nhật
