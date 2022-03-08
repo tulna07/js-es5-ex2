@@ -1,12 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS-ES5-Ex1</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <script src="ex2.js"></script>
+    <div class="container">
+      <div class="row justify-content-center my-4">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">✨<strong>Question 1</strong></div>
+            <div class="card-body">
+              <div class="form-group">
+                <p>
+                  Salary per day:
+                  <strong id="salary-1-day" class="text-info"></strong>
+                </p>
+                <label for="working-days">Number of working day(s):</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="working-days"
+                  id="working-days"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="btn-box d-flex justify-content-between">
+                <button id="btn-q1-calc" class="btn btn-primary">Output</button>
+                <button id="btn-q1-formula" class="btn btn-secondary">
+                  Formula(s)
+                </button>
+              </div>
+            </div>
+            <div class="modal bg-white">
+              <i class="btn-close fa-solid fa-xmark"></i>
+              <p class="modal__text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center my-4">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">✨<strong>Question 2</strong></div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="real-num-1">Real number #1:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="real-num-1"
+                  id="real-num-1"
+                  aria-describedby="helpId"
+                />
+                <label for="real-num-2">Real number #2:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="real-num-2"
+                  id="real-num-2"
+                  aria-describedby="helpId"
+                />
+                <label for="real-num-3">Real number #3:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="real-num-3"
+                  id="real-num-3"
+                  aria-describedby="helpId"
+                />
+                <label for="real-num-4">Real number #4:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="real-num-4"
+                  id="real-num-4"
+                  aria-describedby="helpId"
+                />
+                <label for="real-num-5">Real number #5:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="real-num-5"
+                  id="real-num-5"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="btn-box d-flex justify-content-between">
+                <button id="btn-q2-calc" class="btn btn-primary">Output</button>
+                <button id="btn-q2-formula" class="btn btn-secondary">
+                  Formula(s)
+                </button>
+              </div>
+            </div>
+            <div class="modal bg-white">
+              <i class="btn-close fa-solid fa-xmark"></i>
+              <p class="modal__text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
   </body>
 </html>

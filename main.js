@@ -1,6 +1,17 @@
 // Additional step for formatting currency
 const currencyFormat = new Intl.NumberFormat("vn-VN");
 
+// Modal handler
+const modal = document.getElementsByClassName("modal"),
+  modalText = document.getElementsByClassName("modal__text"),
+  closeBtn = document.getElementsByClassName("btn-close");
+
+for (let i = 0; i < closeBtn.length; ++i) {
+  closeBtn[i].onclick = function () {
+    modal[i].style.display = "none";
+  };
+}
+
 /**
  * 🎃 Bài 1: Tính tiền lương nhân viên
  */
@@ -18,17 +29,28 @@ const currencyFormat = new Intl.NumberFormat("vn-VN");
 //          3. Tạo biến workerSalary lưu giữ kết quả được tính từ
 //             công thức tính lương (1) như đề bài
 //          4. In kết quả được tính từ bước 3 ở trên
-//             ra console
+//             ra modal
 // Output: lương công nhân được tính từ công thức (1)
 const salaryPerDay = 100000;
-var numberOfWorkingDay = 30,
-  workerSalary = salaryPerDay * numberOfWorkingDay;
+const salaryPerDay_Text = document.getElementById("salary-1-day"),
+  numberOfWorkingDay = document.getElementById("working-days"),
+  q1FormulaBtn = document.getElementById("btn-q1-formula"),
+  q1CalcBtn = document.getElementById("btn-q1-calc");
 
-console.log(
-  `Answer 1: Salary of a worker with ${numberOfWorkingDay} day(s) of working: ${currencyFormat.format(
-    workerSalary
-  )} VND`
-);
+salaryPerDay_Text.innerHTML = `${currencyFormat.format(salaryPerDay)} VND`;
+
+q1FormulaBtn.onclick = function () {
+  modal[0].style.display = "block";
+  modalText[0].innerHTML = `workerSalary = salaryPerDay * numberOfWorkingDay`;
+};
+
+q1CalcBtn.onclick = function () {
+  modal[0].style.display = "block";
+  const workerSalary = salaryPerDay * numberOfWorkingDay.value;
+  modalText[0].innerHTML = `<strong>Answer 1:</strong> <br>Salary of a worker with ${
+    numberOfWorkingDay.value
+  } day(s) of working: ${currencyFormat.format(workerSalary)} VND`;
+};
 
 /**
  * 🎃 Bài 2: Tính giá trị trung bình
@@ -45,18 +67,8 @@ console.log(
 //          2. Tạo biến average lưu giữ kết quả được tính từ
 //             công thức tính trung bình cộng 5 số
 //          3. In kết quả được tính từ bước 2 ở trên
-//             ra console
+//             ra modal
 // Output: trung bình cộng của 5 số thực
-var realNumber1 = 1.1,
-  realNumber2 = 2.1,
-  realNumber3 = 3.1,
-  realNumber4 = 4.1,
-  realNumber5 = 5.1;
-var average =
-  (realNumber1 + realNumber2 + realNumber3 + realNumber4 + realNumber5) / 5;
-console.log(
-  `Answer 2: Average of 5 real numbers ${realNumber1}, ${realNumber2}, ${realNumber3}, ${realNumber4}, ${realNumber5}: ${average}`
-);
 
 /**
  * 🎃 Bài 3: Quy đổi tiền
@@ -73,7 +85,7 @@ console.log(
 //          3. Tạo biến vnd gán giá trị là kết quả của
 //             phép tính usd * vnd_per_usd
 //          4. In kết quả được tính từ bước 3 ở trên
-//             ra console
+//             ra modal
 // Output: tiền vnd sau khi đổi từ usd
 const vnd_per_usd = 23500;
 var usd = 100,
@@ -97,7 +109,7 @@ console.log(`Answer 3: ${usd} USD = ${currencyFormat.format(vnd)} VND`);
 //          3. Tạo biến rectArea giữ giá trị diện tích của HCN
 //             được tính bằng công thức rectWidth * rectLength
 //          4. In kết quả được tính từ bước 2 và 3 ở trên
-//             ra console
+//             ra modal
 // Output: Chu vi, diện tích của HCN
 var rectWidth = 10,
   rectLength = 20;
@@ -124,7 +136,7 @@ console.log(`Answer 4: - Perimeter of Rectangle: ${rectPerimeter}
 //          3. Tạo biến tenPlace giữ giá trị hàng chục được tính
 //             bằng công thức Math.floor(numberWith2Digits / 10)
 //          4. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace
-//          5. In kết quả được tính từ bước 4 ở trên ra console
+//          5. In kết quả được tính từ bước 4 ở trên ra modal
 // Output: Tổng 2 ký số của số có 2 chữ số
 var numberWith2Digits = 55,
   unitPlace = numberWith2Digits % 10,
