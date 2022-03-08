@@ -24,7 +24,7 @@ for (let i = 0; i < closeBtn.length; ++i) {
 // Input:   - Lương 1 ngày: 100.000 VND
 //          - Số ngày làm do người dùng nhập
 // Process: 1. Tạo hằng salaryPerDay gán giá trị 100000
-//          2. Tạo biến numberOfWorkingDay gán giá trị do
+//          2. Tạo biến numberOfWorkingDay nhận giá trị do
 //             người dùng nhập vào
 //          3. Tạo biến workerSalary lưu giữ kết quả được tính từ
 //             công thức tính lương (1) như đề bài
@@ -61,15 +61,41 @@ q1CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input:   - 5 số thực do người dùng nhập vào
-// Process: 1. Tạo ra 5 biến realNumber1, realNumber2, ...
-//             realNumber5 được gán giá trị do người dùng
+// Process: 1. Tạo ra 5 biến realNum1, realNum2, ...
+//             realNum5 được nhận giá trị do người dùng
 //             nhập vào
 //          2. Tạo biến average lưu giữ kết quả được tính từ
 //             công thức tính trung bình cộng 5 số
 //          3. In kết quả được tính từ bước 2 ở trên
 //             ra modal
 // Output: trung bình cộng của 5 số thực
+const realNum1 = document.getElementById("real-num-1"),
+  realNum2 = document.getElementById("real-num-2"),
+  realNum3 = document.getElementById("real-num-3"),
+  realNum4 = document.getElementById("real-num-4"),
+  realNum5 = document.getElementById("real-num-5");
 
+const q2CalcBtn = document.getElementById("btn-q2-calc"),
+  q2FormulaBtn = document.getElementById("btn-q2-formula");
+
+q2FormulaBtn.onclick = function () {
+  modal[1].style.display = "block";
+  modalText[1].innerHTML = `average = (realNumber1 + realNumber2 + realNumber3 + realNumber4 + realNumber5) / 5`;
+};
+
+q2CalcBtn.onclick = function () {
+  modal[1].style.display = "block";
+
+  const average =
+    (realNum1.value * 1 +
+      realNum2.value * 1 +
+      realNum3.value * 1 +
+      realNum4.value * 1 +
+      realNum5.value * 1) /
+    5;
+
+  modalText[1].innerHTML = `<strong>Answer 2:</strong><br> Average of 5 real numbers ${realNum1.value}, ${realNum2.value}, ${realNum3.value}, ${realNum4.value}, ${realNum5.value} = ${average}`;
+};
 /**
  * 🎃 Bài 3: Quy đổi tiền
  */
