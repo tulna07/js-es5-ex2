@@ -31,7 +31,7 @@ p {
   height: 1.5px;
   width: 0;
 
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .btn-q-show.active::before {

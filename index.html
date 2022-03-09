@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>JS Exercise 2</title>
+    <link rel="shortcut icon" href="calculator.png" type="image/x-icon" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -161,7 +162,7 @@
                   <strong class="text-info">1</strong> USD =
                   <strong id="vnd-per-usd__text" class="text-info"></strong> VND
                 </p>
-                <label for="usd">USD:</label>
+                <label for="usd">💵USD:</label>
                 <input
                   type="text"
                   class="form-control mb-3"
@@ -190,25 +191,29 @@
         <div class="col-4">
           <div class="card">
             <i class="btn-close-card fa-solid fa-xmark"></i>
-            <div class="card-header">✨<strong>Question 3</strong></div>
+            <div class="card-header">✨<strong>Question 4</strong></div>
             <div class="card-body">
               <div class="form-group">
-                <p>
-                  <strong class="text-info">1</strong> USD =
-                  <strong id="vnd-per-usd__text" class="text-info"></strong> VND
-                </p>
-                <label for="usd">USD:</label>
+                <label for="width">Width:</label>
                 <input
                   type="text"
                   class="form-control mb-3"
-                  name="usd"
-                  id="usd"
+                  name="width"
+                  id="width"
+                  aria-describedby="helpId"
+                />
+                <label for="length">Length:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="length"
+                  id="length"
                   aria-describedby="helpId"
                 />
               </div>
               <div class="btn-box d-flex justify-content-between">
-                <button id="btn-q3-calc" class="btn btn-primary">Output</button>
-                <button id="btn-q3-formula" class="btn btn-secondary">
+                <button id="btn-q4-calc" class="btn btn-primary">Output</button>
+                <button id="btn-q4-formula" class="btn btn-secondary">
                   Formula(s)
                 </button>
               </div>
