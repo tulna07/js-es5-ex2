@@ -11,8 +11,8 @@ p {
 .btn-list {
   gap: 10px;
 
-  top: 50%;
-  left: 0px;
+  top: 25%;
+  left: 0;
   transform: translateY(-50%);
 }
 

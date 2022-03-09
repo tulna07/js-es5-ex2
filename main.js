@@ -209,3 +209,20 @@ q4CalcBtn.onclick = function () {
 //          4. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace
 //          5. In kết quả được tính từ bước 4 ở trên ra modal
 // Output: Tổng 2 ký số của số có 2 chữ số
+const numberWith2Digits = document.getElementById("two-digits-num");
+
+const q5FormulaBtn = document.getElementById("btn-q5-formula"),
+  q5CaclcBtn = document.getElementById("btn-q5-calc");
+
+q5FormulaBtn.onclick = function () {
+  modal[4].style.display = "block";
+  modalText[4].innerHTML = `unitPlace = numberWith2Digits % 10<br> tenPlace = Math.floor(numberWith2Digits / 10)<br> total = unitPlace + tenPlace`;
+};
+
+q5CaclcBtn.onclick = function () {
+  modal[4].style.display = "block";
+  const unitPlace = numberWith2Digits.value % 10,
+    tenPlace = Math.floor(numberWith2Digits.value / 10),
+    total = unitPlace + tenPlace;
+  modalText[4].innerHTML = `<strong>Answer 5:</strong><br>Total of 2 digits ${numberWith2Digits.value} = ${total}`;
+};
