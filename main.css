@@ -4,6 +4,44 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+}
+
+.btn-list {
+  gap: 10px;
+
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.btn-q-show {
+  padding: 8px 18px;
+}
+
+.btn-q-show::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+
+  height: 1.5px;
+  width: 0;
+
+  transition: 0.3s;
+}
+
+.btn-q-show.active::before {
+  width: 8px;
+}
+
+.card {
+  display: none;
+}
+
 .modal {
   display: none;
   padding: 30px;
@@ -19,7 +57,8 @@
   transform: translateY(-50%);
 }
 
-.btn-close {
+.btn-close-modal,
+.btn-close-card {
   font-size: 20px;
 
   position: absolute;
