@@ -1,13 +1,32 @@
 // Additional step for formatting currency
 const currencyFormat = new Intl.NumberFormat("vn-VN");
 
+// Show/ close question handler
+const card = document.getElementsByClassName("card"),
+  closeCardBtn = document.getElementsByClassName("btn-close-card"),
+  showQBtn = document.getElementsByClassName("btn-q-show");
+
+for (let i = 0; i < closeCardBtn.length; ++i) {
+  closeCardBtn[i].onclick = function () {
+    card[i].style.display = "none";
+    showQBtn[i].classList.remove("active");
+  };
+}
+
+for (let i = 0; i < showQBtn.length; ++i) {
+  showQBtn[i].onclick = function () {
+    card[i].style.display = "block";
+    showQBtn[i].classList.add("active");
+  };
+}
+
 // Modal handler
 const modal = document.getElementsByClassName("modal"),
   modalText = document.getElementsByClassName("modal__text"),
-  closeBtn = document.getElementsByClassName("btn-close");
+  closeModalBtn = document.getElementsByClassName("btn-close-modal");
 
-for (let i = 0; i < closeBtn.length; ++i) {
-  closeBtn[i].onclick = function () {
+for (let i = 0; i < closeModalBtn.length; ++i) {
+  closeModalBtn[i].onclick = function () {
     modal[i].style.display = "none";
   };
 }
