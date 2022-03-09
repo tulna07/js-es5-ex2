@@ -1,13 +1,32 @@
 // Additional step for formatting currency
 const currencyFormat = new Intl.NumberFormat("vn-VN");
 
+// Show/ close question handler
+const card = document.getElementsByClassName("card"),
+  closeCardBtn = document.getElementsByClassName("btn-close-card"),
+  showQBtn = document.getElementsByClassName("btn-q-show");
+
+for (let i = 0; i < closeCardBtn.length; ++i) {
+  closeCardBtn[i].onclick = function () {
+    card[i].style.display = "none";
+    showQBtn[i].classList.remove("active");
+  };
+}
+
+for (let i = 0; i < showQBtn.length; ++i) {
+  showQBtn[i].onclick = function () {
+    card[i].style.display = "block";
+    showQBtn[i].classList.add("active");
+  };
+}
+
 // Modal handler
 const modal = document.getElementsByClassName("modal"),
   modalText = document.getElementsByClassName("modal__text"),
-  closeBtn = document.getElementsByClassName("btn-close");
+  closeModalBtn = document.getElementsByClassName("btn-close-modal");
 
-for (let i = 0; i < closeBtn.length; ++i) {
-  closeBtn[i].onclick = function () {
+for (let i = 0; i < closeModalBtn.length; ++i) {
+  closeModalBtn[i].onclick = function () {
     modal[i].style.display = "none";
   };
 }
@@ -154,14 +173,23 @@ q3CalcBtn.onclick = function () {
 //          4. In kết quả được tính từ bước 2 và 3 ở trên
 //             ra modal
 // Output: Chu vi, diện tích của HCN
-var rectWidth = 10,
-  rectLength = 20;
+const rectWidth = document.getElementById("width"),
+  rectLength = document.getElementById("length");
 
-var rectPerimeter = (rectWidth + rectLength) * 2,
-  rectArea = rectWidth * rectLength;
+const q4CalcBtn = document.getElementById("btn-q4-calc"),
+  q4FormulaBtn = document.getElementById("btn-q4-formula");
 
-console.log(`Answer 4: - Perimeter of Rectangle: ${rectPerimeter}
-          - Area of Rectangle: ${rectArea}`);
+q4FormulaBtn.onclick = function () {
+  modal[3].style.display = "block";
+  modalText[3].innerHTML = `rectPerimeter = (rectWidth + rectLength) * 2<br>  rectArea = rectWidth * rectLength`;
+};
+
+q4CalcBtn.onclick = function () {
+  modal[3].style.display = "block";
+  const rectPerimeter = (rectWidth.value * 1 + rectLength.value * 1) * 2,
+    rectArea = rectWidth.value * rectLength.value;
+  modalText[3].innerHTML = `<strong>Answer 4:</strong><br> - Perimeter of Rectangle: ${rectPerimeter}<br>- Area of Rectangle: ${rectArea}`;
+};
 
 /**
  * 🎃 Bài 5: Tính tổng 2 ký số
@@ -181,9 +209,20 @@ console.log(`Answer 4: - Perimeter of Rectangle: ${rectPerimeter}
 //          4. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace
 //          5. In kết quả được tính từ bước 4 ở trên ra modal
 // Output: Tổng 2 ký số của số có 2 chữ số
-var numberWith2Digits = 55,
-  unitPlace = numberWith2Digits % 10,
-  tenPlace = Math.floor(numberWith2Digits / 10),
-  total = unitPlace + tenPlace;
+const numberWith2Digits = document.getElementById("two-digits-num");
 
-console.log(`Answer 5: Total of 2 digits ${numberWith2Digits}: ${total}`);
+const q5FormulaBtn = document.getElementById("btn-q5-formula"),
+  q5CaclcBtn = document.getElementById("btn-q5-calc");
+
+q5FormulaBtn.onclick = function () {
+  modal[4].style.display = "block";
+  modalText[4].innerHTML = `unitPlace = numberWith2Digits % 10<br> tenPlace = Math.floor(numberWith2Digits / 10)<br> total = unitPlace + tenPlace`;
+};
+
+q5CaclcBtn.onclick = function () {
+  modal[4].style.display = "block";
+  const unitPlace = numberWith2Digits.value % 10,
+    tenPlace = Math.floor(numberWith2Digits.value / 10),
+    total = unitPlace + tenPlace;
+  modalText[4].innerHTML = `<strong>Answer 5:</strong><br>Total of 2 digits ${numberWith2Digits.value} = ${total}`;
+};

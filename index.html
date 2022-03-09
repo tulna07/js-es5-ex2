@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>JS Exercise 2</title>
+    <link rel="shortcut icon" href="calculator.png" type="image/x-icon" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -26,14 +27,45 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <ul
+      class="btn-list d-flex flex-column gap-3 position-fixed animate__animated animate__fadeInLeft"
+    >
+      <li class="btn-q-show position-relative btn btn-warning">
+        <strong>Question 1</strong>
+      </li>
+      <li class="btn-q-show position-relative btn btn-warning">
+        <strong>Question 2</strong>
+      </li>
+      <li class="btn-q-show position-relative btn btn-warning">
+        <strong>Question 3</strong>
+      </li>
+      <li class="btn-q-show position-relative btn btn-warning">
+        <strong>Question 4</strong>
+      </li>
+      <li class="btn-q-show position-relative btn btn-warning">
+        <strong>Question 5</strong>
+      </li>
+    </ul>
+
     <div class="container">
+      <!-- Question 1 -->
       <div class="row justify-content-center my-4">
         <div class="col-4">
           <div class="card">
+            <i class="btn-close-card fa-solid fa-xmark"></i>
             <div class="card-header">✨<strong>Question 1</strong></div>
             <div class="card-body">
               <div class="form-group">
@@ -58,16 +90,18 @@
               </div>
             </div>
             <div class="modal bg-white">
-              <i class="btn-close fa-solid fa-xmark"></i>
+              <i class="btn-close-modal fa-solid fa-xmark"></i>
               <p class="modal__text"></p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Question 2 -->
       <div class="row justify-content-center my-4">
         <div class="col-4">
           <div class="card">
+            <i class="btn-close-card fa-solid fa-xmark"></i>
             <div class="card-header">✨<strong>Question 2</strong></div>
             <div class="card-body">
               <div class="form-group">
@@ -120,16 +154,18 @@
               </div>
             </div>
             <div class="modal bg-white">
-              <i class="btn-close fa-solid fa-xmark"></i>
+              <i class="btn-close-modal fa-solid fa-xmark"></i>
               <p class="modal__text"></p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Question 3 -->
       <div class="row justify-content-center my-4">
         <div class="col-4">
           <div class="card">
+            <i class="btn-close-card fa-solid fa-xmark"></i>
             <div class="card-header">✨<strong>Question 3</strong></div>
             <div class="card-body">
               <div class="form-group">
@@ -137,7 +173,7 @@
                   <strong class="text-info">1</strong> USD =
                   <strong id="vnd-per-usd__text" class="text-info"></strong> VND
                 </p>
-                <label for="usd">USD:</label>
+                <label for="usd">💵USD:</label>
                 <input
                   type="text"
                   class="form-control mb-3"
@@ -154,7 +190,79 @@
               </div>
             </div>
             <div class="modal bg-white">
-              <i class="btn-close fa-solid fa-xmark"></i>
+              <i class="btn-close-modal fa-solid fa-xmark"></i>
+              <p class="modal__text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="row justify-content-center my-4">
+        <div class="col-4">
+          <div class="card">
+            <i class="btn-close-card fa-solid fa-xmark"></i>
+            <div class="card-header">✨<strong>Question 4</strong></div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="width">Width:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="width"
+                  id="width"
+                  aria-describedby="helpId"
+                />
+                <label for="length">Length:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="length"
+                  id="length"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="btn-box d-flex justify-content-between">
+                <button id="btn-q4-calc" class="btn btn-primary">Output</button>
+                <button id="btn-q4-formula" class="btn btn-secondary">
+                  Formula(s)
+                </button>
+              </div>
+            </div>
+            <div class="modal bg-white">
+              <i class="btn-close-modal fa-solid fa-xmark"></i>
+              <p class="modal__text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="row justify-content-center my-4">
+        <div class="col-4">
+          <div class="card">
+            <i class="btn-close-card fa-solid fa-xmark"></i>
+            <div class="card-header">✨<strong>Question 5</strong></div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="width">Number with 2 digits:</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="two-digits-num"
+                  id="two-digits-num"
+                  aria-describedby="helpId"
+                />
+              </div>
+              <div class="btn-box d-flex justify-content-between">
+                <button id="btn-q5-calc" class="btn btn-primary">Output</button>
+                <button id="btn-q5-formula" class="btn btn-secondary">
+                  Formula(s)
+                </button>
+              </div>
+            </div>
+            <div class="modal bg-white">
+              <i class="btn-close-modal fa-solid fa-xmark"></i>
               <p class="modal__text"></p>
             </div>
           </div>
