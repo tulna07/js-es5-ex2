@@ -206,14 +206,15 @@ q4CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input: - Nhập vào 1 số có 2 chữ số
-// Process: 1. Tạo ra biến numberWith2Digits gán giá trị được
-//             nhập vào
-//          2. Tạo biến unitPlace giữ giá trị hàng đơn vị được tính
-//             bằng công thức numberWith2Digits % 10
-//          3. Tạo biến tenPlace giữ giá trị hàng chục được tính
-//             bằng công thức Math.floor(numberWith2Digits / 10)
-//          4. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace
-//          5. In kết quả được tính từ bước 4 ở trên ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập vào input số có 2 chữ số.
+//          2. Tạo ra biến numberWith2Digits gán giá trị được
+//             nhập vào từ giao diện.
+//          3. Tạo biến unitPlace giữ giá trị hàng đơn vị được tính
+//             bằng công thức numberWith2Digits % 10.
+//          4. Tạo biến tenPlace giữ giá trị hàng chục được tính
+//             bằng công thức Math.floor(numberWith2Digits / 10).
+//          5. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace.
+//          6. In kết quả được tính từ bước 5 ở trên ra modal ở giao diện.
 // Output: Tổng 2 ký số của số có 2 chữ số
 const numberWith2Digits = document.getElementById("two-digits-num");
 
