@@ -42,13 +42,14 @@ for (let i = 0; i < closeModalBtn.length; ++i) {
 // -------------- SOLUTION --------------
 // Input:   - Lương 1 ngày: 100.000 VND
 //          - Số ngày làm do người dùng nhập
-// Process: 1. Tạo hằng salaryPerDay gán giá trị 100000
-//          2. Tạo biến numberOfWorkingDay nhận giá trị do
-//             người dùng nhập vào
-//          3. Tạo biến workerSalary lưu giữ kết quả được tính từ
-//             công thức tính lương (1) như đề bài
-//          4. In kết quả được tính từ bước 3 ở trên
-//             ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập số ngày làm vào input.
+//          2. Tạo hằng salaryPerDay gán giá trị 100000.
+//          3. Tạo biến numberOfWorkingDay nhận giá trị do
+//             người dùng nhập vào từ giao diện.
+//          4. Tạo biến workerSalary lưu giữ kết quả được tính từ
+//             công thức tính lương (1) như đề bài.
+//          5. In kết quả được tính từ bước 4 ở trên
+//             ra modal ở giao diện.
 // Output: lương công nhân được tính từ công thức (1)
 const salaryPerDay = 100000;
 const salaryPerDay_Text = document.getElementById("salary-1-day"),
@@ -80,13 +81,14 @@ q1CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input:   - 5 số thực do người dùng nhập vào
-// Process: 1. Tạo ra 5 biến realNum1, realNum2, ...
-//             realNum5 được nhận giá trị do người dùng
-//             nhập vào
-//          2. Tạo biến average lưu giữ kết quả được tính từ
-//             công thức tính trung bình cộng 5 số
-//          3. In kết quả được tính từ bước 2 ở trên
-//             ra modal
+// Process: 1. Tạo ra giao diện, cho người dùng nhập vào 5 số bất kỳ.
+//          2. Tạo ra 5 biến realNum1, realNum2, ...
+//             realNum5 được gán giá trị do người dùng
+//             nhập vào từ giao diện.
+//          3. Tạo biến average lưu giữ kết quả được tính từ
+//             công thức tính trung bình cộng 5 số.
+//          4. In kết quả được tính từ bước 3 ở trên
+//             ra modal ở giao diện.
 // Output: trung bình cộng của 5 số thực
 const realNum1 = document.getElementById("real-num-1"),
   realNum2 = document.getElementById("real-num-2"),
@@ -124,13 +126,15 @@ q2CalcBtn.onclick = function () {
 // -------------- SOLUTION --------------
 // Input:   - Cho 1 USD = 23.500 VND
 //          - Nhập số tiền USD cần đổi sang VND
-// Process: 1. Tạo ra hằng vnd_per_usd gán giá trị 23500
+// Process: 1. Thiết kế giao diện, cho người dùng nhập vào
+//             số tiền USD cần đổi vào input.
+//          2. Tạo hằng vnd_per_usd được khởi tạo giá trị 23500
 //          2. Tạo biến usd nhận giá trị được nhập vào
-//             từ người dùng
+//             từ người dùng ở giao diện.
 //          3. Tạo biến vnd gán giá trị là kết quả của
-//             phép tính usd * vnd_per_usd
+//             phép tính usd * vnd_per_usd.
 //          4. In kết quả được tính từ bước 3 ở trên
-//             ra modal
+//             ra modal ở giao diện.
 // Output: tiền vnd sau khi đổi từ usd
 const vnd_per_usd = 23500;
 const vnd_per_usd_text = document.getElementById("vnd-per-usd__text");
@@ -164,14 +168,16 @@ q3CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input: - Nhập chiều dài và chiều rộng của HCN
-// Process: 1. Tạo ra 2 biến rectWidth và rectLength gán lần lượt
-//             chiều dài và chiều rộng được nhập vào
-//          2. Tạo biến rectPerimeter giữ giá trị chu vi của HCN
-//             được tính bằng công thức (rectWidth + rectLength)*2
-//          3. Tạo biến rectArea giữ giá trị diện tích của HCN
-//             được tính bằng công thức rectWidth * rectLength
-//          4. In kết quả được tính từ bước 2 và 3 ở trên
-//             ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập chiều dài và
+//             chiều rộng vào các ô input.
+//          2. Tạo ra 2 biến rectWidth và rectLength gán lần lượt
+//             chiều dài và chiều rộng được nhập vào từ người dùng.
+//          3. Tạo biến rectPerimeter giữ giá trị chu vi của HCN
+//             được tính bằng công thức (rectWidth + rectLength)*2.
+//          4. Tạo biến rectArea giữ giá trị diện tích của HCN
+//             được tính bằng công thức rectWidth * rectLength.
+//          5. In kết quả được tính từ bước 3 và 4 ở trên
+//             ra modal ở giao diện.
 // Output: Chu vi, diện tích của HCN
 const rectWidth = document.getElementById("width"),
   rectLength = document.getElementById("length");
@@ -200,14 +206,15 @@ q4CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input: - Nhập vào 1 số có 2 chữ số
-// Process: 1. Tạo ra biến numberWith2Digits gán giá trị được
-//             nhập vào
-//          2. Tạo biến unitPlace giữ giá trị hàng đơn vị được tính
-//             bằng công thức numberWith2Digits % 10
-//          3. Tạo biến tenPlace giữ giá trị hàng chục được tính
-//             bằng công thức Math.floor(numberWith2Digits / 10)
-//          4. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace
-//          5. In kết quả được tính từ bước 4 ở trên ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập vào input số có 2 chữ số.
+//          2. Tạo ra biến numberWith2Digits gán giá trị được
+//             nhập vào từ giao diện.
+//          3. Tạo biến unitPlace giữ giá trị hàng đơn vị được tính
+//             bằng công thức numberWith2Digits % 10.
+//          4. Tạo biến tenPlace giữ giá trị hàng chục được tính
+//             bằng công thức Math.floor(numberWith2Digits / 10).
+//          5. Tạo biến total lưu giữ kết quả là tổng của unitPlace + tenPlace.
+//          6. In kết quả được tính từ bước 5 ở trên ra modal ở giao diện.
 // Output: Tổng 2 ký số của số có 2 chữ số
 const numberWith2Digits = document.getElementById("two-digits-num");
 
