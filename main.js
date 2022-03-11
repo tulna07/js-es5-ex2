@@ -126,13 +126,15 @@ q2CalcBtn.onclick = function () {
 // -------------- SOLUTION --------------
 // Input:   - Cho 1 USD = 23.500 VND
 //          - Nhập số tiền USD cần đổi sang VND
-// Process: 1. Tạo ra hằng vnd_per_usd gán giá trị 23500
+// Process: 1. Thiết kế giao diện, cho người dùng nhập vào
+//             số tiền USD cần đổi vào input.
+//          2. Tạo hằng vnd_per_usd được khởi tạo giá trị 23500
 //          2. Tạo biến usd nhận giá trị được nhập vào
-//             từ người dùng
+//             từ người dùng ở giao diện.
 //          3. Tạo biến vnd gán giá trị là kết quả của
-//             phép tính usd * vnd_per_usd
+//             phép tính usd * vnd_per_usd.
 //          4. In kết quả được tính từ bước 3 ở trên
-//             ra modal
+//             ra modal ở giao diện.
 // Output: tiền vnd sau khi đổi từ usd
 const vnd_per_usd = 23500;
 const vnd_per_usd_text = document.getElementById("vnd-per-usd__text");
