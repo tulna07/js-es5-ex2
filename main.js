@@ -168,14 +168,16 @@ q3CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input: - Nhập chiều dài và chiều rộng của HCN
-// Process: 1. Tạo ra 2 biến rectWidth và rectLength gán lần lượt
-//             chiều dài và chiều rộng được nhập vào
-//          2. Tạo biến rectPerimeter giữ giá trị chu vi của HCN
-//             được tính bằng công thức (rectWidth + rectLength)*2
-//          3. Tạo biến rectArea giữ giá trị diện tích của HCN
-//             được tính bằng công thức rectWidth * rectLength
-//          4. In kết quả được tính từ bước 2 và 3 ở trên
-//             ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập chiều dài và
+//             chiều rộng vào các ô input.
+//          2. Tạo ra 2 biến rectWidth và rectLength gán lần lượt
+//             chiều dài và chiều rộng được nhập vào từ người dùng.
+//          3. Tạo biến rectPerimeter giữ giá trị chu vi của HCN
+//             được tính bằng công thức (rectWidth + rectLength)*2.
+//          4. Tạo biến rectArea giữ giá trị diện tích của HCN
+//             được tính bằng công thức rectWidth * rectLength.
+//          5. In kết quả được tính từ bước 3 và 4 ở trên
+//             ra modal ở giao diện.
 // Output: Chu vi, diện tích của HCN
 const rectWidth = document.getElementById("width"),
   rectLength = document.getElementById("length");
