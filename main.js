@@ -81,13 +81,14 @@ q1CalcBtn.onclick = function () {
 
 // -------------- SOLUTION --------------
 // Input:   - 5 số thực do người dùng nhập vào
-// Process: 1. Tạo ra 5 biến realNum1, realNum2, ...
-//             realNum5 được nhận giá trị do người dùng
-//             nhập vào
-//          2. Tạo biến average lưu giữ kết quả được tính từ
-//             công thức tính trung bình cộng 5 số
-//          3. In kết quả được tính từ bước 2 ở trên
-//             ra modal
+// Process: 1. Tạo ra giao diện, cho người dùng nhập vào 5 số bất kỳ.
+//          2. Tạo ra 5 biến realNum1, realNum2, ...
+//             realNum5 được gán giá trị do người dùng
+//             nhập vào từ giao diện.
+//          3. Tạo biến average lưu giữ kết quả được tính từ
+//             công thức tính trung bình cộng 5 số.
+//          4. In kết quả được tính từ bước 3 ở trên
+//             ra modal ở giao diện.
 // Output: trung bình cộng của 5 số thực
 const realNum1 = document.getElementById("real-num-1"),
   realNum2 = document.getElementById("real-num-2"),
