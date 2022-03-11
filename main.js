@@ -42,13 +42,14 @@ for (let i = 0; i < closeModalBtn.length; ++i) {
 // -------------- SOLUTION --------------
 // Input:   - Lương 1 ngày: 100.000 VND
 //          - Số ngày làm do người dùng nhập
-// Process: 1. Tạo hằng salaryPerDay gán giá trị 100000
-//          2. Tạo biến numberOfWorkingDay nhận giá trị do
-//             người dùng nhập vào
-//          3. Tạo biến workerSalary lưu giữ kết quả được tính từ
-//             công thức tính lương (1) như đề bài
-//          4. In kết quả được tính từ bước 3 ở trên
-//             ra modal
+// Process: 1. Thiết kế giao diện, cho người dùng nhập số ngày làm vào input.
+//          2. Tạo hằng salaryPerDay gán giá trị 100000.
+//          3. Tạo biến numberOfWorkingDay nhận giá trị do
+//             người dùng nhập vào từ giao diện.
+//          4. Tạo biến workerSalary lưu giữ kết quả được tính từ
+//             công thức tính lương (1) như đề bài.
+//          5. In kết quả được tính từ bước 4 ở trên
+//             ra modal ở giao diện.
 // Output: lương công nhân được tính từ công thức (1)
 const salaryPerDay = 100000;
 const salaryPerDay_Text = document.getElementById("salary-1-day"),
